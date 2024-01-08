@@ -1,0 +1,121 @@
+
+:root {
+    --size: 15px;
+    --size2:15px;
+    --color:#444;
+    --bkg:linear-gradient( to right,red,orange,yellow,green,blue,indigo,violet);
+}
+body{
+    /* place-items: center; */
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh; /* pour centrer verticalement sur toute la hauteur de la fenêtre */
+    margin: 0;
+    
+}
+.container{
+    box-sizing: border-box;
+    border-image: var(--bkg);
+    border-image-slice: 1; 
+    border-image-width: 5px; 
+    border-style: solid;
+    background-color: #222;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    }
+.loader{
+    border-radius: 100%;
+    border: var(--size) solid var(--color);
+    margin: calc(var(--size)*2);
+}
+.loader:nth-child(1){
+    animation: preloader .5s ease-in-out alternate infinite ;
+
+}
+.loader:nth-child(2){
+    animation: preloader .5s ease-in-out alternate .2s infinite;
+
+}
+.loader:nth-child(3){
+    animation: preloader .5s ease-in-out alternate .4s infinite;
+
+}
+@keyframes preloader {
+    100%{ transform: scale(3);}   
+}
+.container2{
+    border-image: var(--bkg);
+    border-image-slice: 1; 
+    border-image-width: 5px; 
+    border-style: solid;
+    background-color: #222;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+.loader2{
+    /* border-radius: 10%; */
+    border: var(--size2) solid var(--color);
+    height: 30px;
+    margin: var(--size2);
+}
+.loader22{
+    height: 50px;
+
+}
+.loader23{
+    height: 90px;
+
+}
+.loader2:nth-child(1){
+    animation: preloader21 .5s ease-in-out alternate-reverse infinite ;
+
+}
+.loader2:nth-child(2){
+    animation: preloader22 .5s ease-in-out alternate-reverse  infinite;
+
+}
+.loader2:nth-child(3){
+    animation: preloader23 .5s ease-in-out alternate  infinite;
+
+}
+@keyframes preloader21 {
+    100%{ transform: scaleY(.3);}   
+}
+@keyframes preloader22 {
+    100%{ transform: scaleY(.5);}   
+}
+@keyframes preloader23 {
+    100%{ transform: scaleY(.7);}   
+}
+/* Default styles for all screen sizes */
+body {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Media query for screens with a maximum width of 600 pixels */
+@media screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center; 
+        height: 100vh;
+    } 
+    
+}
